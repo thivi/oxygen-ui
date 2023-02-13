@@ -31,6 +31,7 @@ enum StorybookCategories {
 }
 
 export type Stories =
+  | 'ActionCard'
   | 'AppBar'
   | 'Avatar'
   | 'ButtonDropdownMenu'
@@ -89,12 +90,15 @@ const StoryConfig: StorybookConfig = {
     },
     hierarchy: `${StorybookCategories.Navigation}/Header`,
   },
+  ActionCard: {
+    hierarchy: `${ StorybookCategories.Surfaces }/Action Card`,
+  },
   AppBar: {
     hierarchy: `${StorybookCategories.Surfaces}/App Bar`,
-  }, 
+  },
   Avatar: {
     hierarchy: `${StorybookCategories.DataDisplay}/Avatar`,
-  }, 
+  },
   Box: {
     hierarchy: `${StorybookCategories.Layout}/Box`,
   },
